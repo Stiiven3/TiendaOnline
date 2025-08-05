@@ -112,44 +112,41 @@
 
                   
 
-              <div class="hidden  md:block lg:flex  "   >
+              <div class="hidden md:block lg:flex">
 
-                      <div class=" color h-screen w-[450px] ">
-                        <h2 class="font-bold text-2xl text-center">Filtro de productos</h2>
+  <!-- Columna lateral -->
+              <div class="color h-full w-[450px]">
+                  <h2 class="font-bold text-2xl text-center">Filtro de productos</h2>
+                  <!-- ... filtros ... -->
+                    
+                           
+                          <div class=" text-center">Precio</div>
+                          <div class=" text-center" >Categorias</div>
 
-                        <div class="text-center flex flex-col gap-4 mt-4">
-                          <div>Precio</div>
-                          <div>Categorias</div>
-                          <div></div>
-                          <div></div>
+                           <div class="w-full flex justify-center"><button id="limpiar" class="bg-blue-500 w-30 text-white cursor-pointer rounded-2xl">Limpliar</button> 
+                            <button id="aplicar" class="bg-blue-500 w-30 cursor-pointer text-white rounded-2xl">Aplicar</button></div>
+                          
 
-                          <div ><button id="limpiar" class="bg-blue-500 w-30 text-white cursor-pointer rounded-2xl">Limpliar</button> <button id="aplicar" class="bg-blue-500 w-30 cursor-pointer text-white rounded-2xl">Aplicar</button></div>
+    
+              </div>
 
-
+                   <!-- Columna principal -->
+                      <div class="w-full px-4">
+                        <div class="flex justify-center items-center w-full">
+                          <h2 class="text-center hidden md:block w-full font-bold text-2xl">Supermercado (<span></span>)</h2>
+                          <input type="text" class="h-5 text-center" placeholder="Ordenar">
                         </div>
-                        
+
+                        <!-- AQUÍ DEBE IR EL CONTENEDOR DE PRODUCTOS -->
+                        <div id="contenedor-productos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8"></div>
                       </div>
 
-                      <div class="w-full  ">
-                      <div class="flex justify-center items-center  w-full">
-
-                        <h2 class=" text-center hidden md:block w-full font-bold text-2xl">Supermercado (  <span></span>  )</h2>
-
-                        <input type="text"  class="h-5 text-center" placeholder="Ordenar">
-
-
-                      </div>
-                      
-
-
-                      </div>
-
+                    </div>
 
 
               </div>
 
 
-             
             </section>
 
 
