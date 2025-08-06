@@ -22,7 +22,7 @@
              <!-- <div class="bg-white w-36 h-10 "> <input class="w-5" type="text"> </div> -->
 
               <div class=" flex justify-center items-center gap-4   lg:w-[500px]">
-              <input type="text" placeholder="Buscar productos  " class="  lg:w-96 bg-white h-10 rounded-lg hidden md:block text-gray-500">
+              <input type="text"  placeholder="Buscar productos  " class="  text-center lg:w-96 bg-white h-10 rounded-lg hidden md:block text-gray-500">
          </div> 
 
         <nav class=" flex w-40 justify-end mr-4 ">
@@ -33,7 +33,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
         </svg>
 
-        <a href="./login.html"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 cursor-pointer">
+        <a href="./login.html"><svg  id="icono" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 cursor-pointer">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
         </svg>     </a>
         
@@ -73,7 +73,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
               </svg>
 
-            <h5 class="cursor-pointer text-center mx-auto ">Recomendamos</h5>
+            <h5 class="cursor-pointer text-center mx-auto  ">Recomendamos</h5>
 
             </div>
 
@@ -110,12 +110,19 @@
 
                   <h2 class=" sm:hidden font-bold text-2xl">Supermercado (  <span></span>  )</h2>
 
+                  <div class="sm:hidden">
+
+                       <div id="contenedor-productosM" class="grid  justify-center  gap-2 mt-8"></div>
+                      </div>
+
+                  </div>
+
                   
 
               <div class="hidden md:block lg:flex">
 
   <!-- Columna lateral -->
-              <div class="color h-full w-[450px]">
+              <div class="color h-full  lg:w-[350px]">
                   <h2 class="font-bold text-2xl text-center">Filtro de productos</h2>
                   <!-- ... filtros ... -->
                     
@@ -138,7 +145,7 @@
                         </div>
 
                         <!-- AQUÍ DEBE IR EL CONTENEDOR DE PRODUCTOS -->
-                        <div id="contenedor-productos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8"></div>
+                        <div id="contenedor-productos" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8"></div>
                       </div>
 
                     </div>
