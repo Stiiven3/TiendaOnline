@@ -129,15 +129,30 @@
               <div class="hidden md:block lg:flex">
 
   <!-- Columna lateral -->
-              <div class="color  flex flex-col gap-5  lg:w-[350px]">
+              <div class="color  flex flex-col items-center gap-8  lg:w-[350px]">
                   <h2 class="font-bold text-2xl text-center">Filtro de productos</h2>
                   <!-- ... filtros ... -->
                     
                            
                           <div class=" text-center">Precio</div>
-                          <div class=" text-center" >Categorias</div>
+                          <div class="flex items-center gap-2">
+                            <span class="text-sm text-gray-700">0</span>
+                            <input type="range" class="w-[200px]" id="Precio-filtro" min="0" max="1000" value="1000">
+                            <span class="text-sm text-gray-700">1000</span>
+                          </div>
+                         
+                          <select name="Categorias" id="categoria-select" class="border px-3 py-2 rounded">
+                              <option value="" disabled selected>Selecciona una categoría</option>
+                              <option value="Frutas">Frutas</option>
+                              <option value="Arroz">Arroz</option>
+                              <option value="Lácteos">Lácteos</option>
+                              <option value="Bebidas">Bebidas</option>
+                              <option value="Abarrotes">Abarrotes</option>
+                              <option value="Aseo Personal">Aseo Personal</option>
+                          </select>
+                          
 
-                          <div class="w-full flex justify-center"><button id="limpiar" class="bg-blue-500 w-30 text-white cursor-pointer rounded-2xl">Limpliar</button> 
+                          <div class="w-full flex gap-3 justify-center"><button id="limpiar" class="bg-blue-500 w-30 text-white cursor-pointer rounded-2xl">Limpliar</button> 
                             <button id="aplicar" class="bg-blue-500 w-30 cursor-pointer text-white rounded-2xl">Aplicar</button></div>
 
                     

@@ -67,9 +67,18 @@ function renderizarProductos(productos) {
             ${producto.descripcion}<br>
             <small>ID: ${producto.id_producto}</small>
           </p>
+          
+
+           <p class="text-base text-gray-700 mt-2">
+            <strong>categoria:</strong> $${producto.categoria}
+            
+          </p>
           <p class="text-base text-gray-700 mt-2">
             <strong>Precio:</strong> $${producto.precio}
+            
           </p>
+
+          
         </div>
         <div class="p-6 pt-0">
           <button  onclick='agregarAlCarrito(${JSON.stringify(producto)})' class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
@@ -142,15 +151,13 @@ const token = sessionStorage.getItem("token");
 
 // Si NO hay sesión, ocultar carrito
 if (!token || !usuario) {
-  if (botonCarrito) botonCarrito.style.display = "none";
+  //if (botonCarrito) botonCarrito.style.display = "none";
 }
 
 // Si hay sesión, activar funciones del carrito
 if (token && usuario) {
 
-  // Mostrar nombre en encabezado si quieres
-
-
+  
   // Abrir carrito
   botonCarrito.addEventListener("click", () => {
     panelCarrito.classList.remove("translate-x-full");
