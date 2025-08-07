@@ -218,15 +218,15 @@ if (token && usuario) {
     });
   }
 
-  // Hacer funciones globales si se usan en HTML directamente
+  
   window.agregarAlCarrito = agregarAlCarrito;
   window.eliminarDelCarrito = eliminarDelCarrito;
 
-  // Mostrar carrito al cargar si ya hay productos
+
   renderizarCarrito();
 }
 
-// Ordenar productos al cambiar el select
+
 const selectOrden = document.getElementById("orden-precio");
 
 if (selectOrden) {
