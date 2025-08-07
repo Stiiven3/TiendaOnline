@@ -264,6 +264,44 @@ selectCategoria.addEventListener("change", function () {
   renderizarProductos(productosFiltrados);
 });
 
+let filtroCategoria = "";
+let filtroOrdenPrecio = "";
+
+// Select categoría
+selectCategoria.addEventListener("change", function () {
+  filtroCategoria = this.value;
+  aplicarFiltros();
+});
+
+// Select precio
+if (selectOrden) {
+  selectOrden.addEventListener("change", function () {
+    filtroOrdenPrecio = this.value;
+    aplicarFiltros();
+  });
+}
+
+function aplicarFiltros() {
+  let productosFiltrados = [...productosGlobal];
+
+  // Filtrar por categoría
+  if (filtroCategoria) {
+    productosFiltrados = productosFiltrados.filter(
+      (producto) => producto.categoria === filtroCategoria
+    );
+  }
+
+  // Ordenar por precio
+  if (filtroOrdenPrecio === "mayor") {
+    productosFiltrados.sort((a, b) => b.precio - a.precio);
+  } else if (filtroOrdenPrecio === "menor") {
+    productosFiltrados.sort((a, b) => a.precio - b.precio);
+  }
+
+  renderizarProductos(productosFiltrados);
+}
+
+
 
 
 
