@@ -3,7 +3,7 @@
 const productosImagenes = [
   { id_producto: 18, ruta: "./productos/productos/Image-Kitkat.png" },
   { id_producto: 3, ruta: "./productos/productos/Image-Vaquita.png" },
-  { id_producto: 1, ruta: "./productos/productos/arroz.png" },
+  { id_producto: 1, ruta: "./productos/productos/Arroz.png" },
   { id_producto: 19, ruta: "./productos/productos/Image-Colgate.png" },
   { id_producto: 21, ruta: "./productos/productos/Image-GalletasdeTrigo.png" },
   { id_producto: 17, ruta: "./productos/productos/ImageEcommerce.jpg" },
