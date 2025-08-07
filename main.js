@@ -17,12 +17,12 @@ const productosImagenes = [
   { id_producto: 7, ruta: "./productos/productos/Atun.png" },
   { id_producto: 8, ruta: "./productos/productos/Manzana.png" },
   { id_producto: 9, ruta: "./productos/productos/Plantanos.png" },
-  { id_producto: 10, ruta: "./productos/productos/yogurt.png" },//yogurt sin azucar
-  { id_producto: 14, ruta: "./productos/productos/cereal-integral.png" },//cereal integral
-  { id_producto: 15, ruta: "./productos/productos/Image-Vinagre.png" },//galletas de avena
-  { id_producto: 20, ruta: "./productos/productos/Image-Vinagre.png" },//detergente liquido
-  { id_producto: 23, ruta: "./productos/productos/Image-Vinagre.png" },//chorillo parrillero
-  { id_producto: 12, ruta: "./productos/productos/Image-Vinagre.png" },//jabon liquido
+  { id_producto: 10, ruta: "./productos/productos/yogurt.png" },
+  { id_producto: 14, ruta: "./productos/productos/cereal-integral.png" },
+  { id_producto: 15, ruta: "./productos/productos/avena.png" },
+  { id_producto: 20, ruta: "./productos/productos/detergente.png" },
+  { id_producto: 23, ruta: "./productos/productos/chorizo.png" },//chorillo parrillero
+  { id_producto: 12, ruta: "./productos/productos/jabon-liquido.png" },//jabon liquido
 ];
 
 function obtenerImagen(id_producto) {
@@ -225,4 +225,51 @@ if (token && usuario) {
   // Mostrar carrito al cargar si ya hay productos
   renderizarCarrito();
 }
+
+// Ordenar productos al cambiar el select
+const selectOrden = document.getElementById("orden-precio");
+
+if (selectOrden) {
+  selectOrden.addEventListener("change", function (e) {
+    const valor = e.target.value;
+    let productosOrdenados = [...productosGlobal]; // copia segura
+
+    if (valor === "mayor") {
+      productosOrdenados.sort((a, b) => b.precio - a.precio);
+    } else if (valor === "menor") {
+      productosOrdenados.sort((a, b) => a.precio - b.precio);
+    }
+
+    renderizarProductos(productosOrdenados);
+  });
+}
+
+const selectCategoria = document.getElementById("categoria-select");
+
+selectCategoria.addEventListener("change", function () {
+  const categoriaSeleccionada = this.value; 
+
+  if (!categoriaSeleccionada) {
+    
+    renderizarProductos(productosGlobal);
+    return;
+  }
+
+ 
+  const productosFiltrados = productosGlobal.filter(
+    (producto) => producto.categoria === categoriaSeleccionada
+  );
+
+
+  renderizarProductos(productosFiltrados);
+});
+
+
+
+
+
+
+
+
+
 
