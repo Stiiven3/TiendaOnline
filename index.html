@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen">
 
     <header class="bg-blue-900 w-full h-30 flex gap-4 justify-center items-center ">
 
@@ -33,7 +33,7 @@
         <div class=" flex  gap-6  text-white" ><svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" sm:hidden size-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
         </svg>
-        <label for="" class="cursor-pointer  flex "><span class="hidden lg:block">Login</span><a href="./login.html" class=" gap-2 "><svg  id="icono" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:cursor-pointer">
+        <label for="" id="lotri" class="cursor-pointer  flex  "><span  class="hidden lg:block">Login</span><a href="./login.html" class=" gap-2 "><svg  id="icono" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sm:cursor-pointer">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
         </svg>  </label> 
            </a>
@@ -98,7 +98,7 @@ Recomendamos</h5>
 
     
 
-    <main>
+    <main class="flex-1">
 
        <div class="w-full  border-gray-400/80 m-auto   border-b-2  mt-2"><p class="text-black lg:ml-4 mb-2">  Inicio <a href=""><span class="text-gray-400/90">-></span></a>   <a href=""><span class="text-black">Supermercado</span></a> </p></div>
        <div class="w-full flex sm:hidden  gap-4 border-gray-400/80 mx-auto  border-b-2 ">
@@ -114,7 +114,7 @@ Recomendamos</h5>
           <p>Filtra por</p></div>
        </div> 
 
-            <section class=" mt-6 h-screen">
+            <section class=" mt-6 ">
                   
               <img src="" class=" object-contain" alt="">
             
@@ -200,6 +200,9 @@ Recomendamos</h5>
             </section>
 
 
+
+
+            
     </main>
  <script defer src="./main.js"></script>
 
@@ -217,7 +220,92 @@ Recomendamos</h5>
                                 <!-- Aquí se insertarán los productos agregados -->
                               </div>
                             </div>
- 
+
+
+   
+
+
+
+
+<footer class="bg-blue-900 text-center">
+    <div class="mx-auto w-full max-w-screen-xl">
+      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div>
+            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Company</h2>
+            <ul class="text-white 400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class=" hover:underline">About</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Careers</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Brand Center</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Help center</h2>
+            <ul class=" text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Discord Server</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Twitter</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Facebook</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Licensing</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Download</h2>
+            <ul class=" text-white font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">iOS</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Android</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Windows</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">MacOS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
   
+      </div>
+    </div>
+</footer>
+
+
+
+
+
+  
+
 </body>
 </html>
