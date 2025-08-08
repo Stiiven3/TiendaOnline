@@ -33,10 +33,13 @@ function obtenerImagen(id_producto) {
 const nombreUsuario = sessionStorage.getItem("usuario");
 const mensaje = document.querySelector("#mensaje-usuario");
 const icono = document.querySelector("#icono");
+const lotri2 = document.querySelector("#lotri");
+
 
 if (nombreUsuario && mensaje) {
   mensaje.textContent = `¡Hola, ${nombreUsuario}😊`;
   if (icono) icono.classList.add("hidden");
+  if (lotri2) lotri.classList.add("hidden");
   
 }
 
